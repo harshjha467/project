@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    font-family: 'raleway', sans-serif;
+    text-align: center;
+    background-size: cover;
+    background-position: center; 
+}
+
+section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+section .bg{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+section .tree{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    z-index: 100;
+    pointer-events: none;
+}
+
+section .girl{
+    position: absolute;
+    scale: 0.65;
+    animation: girl 10s linear infinite;
+}
+
+@keyframes girl{
+
+    0%{
+        transform: translateX(calc(100% + 100vw));
+    }
+
+    50%{
+        transform: translateX(calc(-100% - 100vw));
+    }
+    50.1%{
+        transform: translateX(calc(-100% - 100vw))
+        rotateY(180deg);
+       
+    }
+    100%{
+        transform: translateX(calc(100% + 100vw))
+        rotateY(180deg);
+       
+    }
+}
+
+
+.login-container{
+    align-items: center;
+    height: 400px;
+    width: 450px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);;
+    position: relative;
+    
+}
+
+h1{
+    color: #832019;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 0 ;
+}
+@media (max-width: 420px) {
+    
+    .login-container{
+        height: 300px;
+        width: 300px;
+        z-index: 1;}
+    h1{
+        font-size: 1.7rem;
+    }
+
+}
+
+
+
+button{
+    height: 40px;
+    width: 350px;
+    color: white;
+    background-color: #832019;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+button:hover{
+    background-color: #7e312c;
+}
+@media (max-width: 420px) {
+    
+    button{
+        height: 30px;
+        width: 200px;
+    }
+}
+
+
+input{
+    height: 40px;
+    width: 350px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: none;
+    font-size: 1rem;
+    color: #832019;
+    outline: none;
+    border-radius: 5px;
+}
+
+input::placeholder{
+    color: #832019;
+}
+@media (max-width: 420px) {
+    
+    input{
+        height: 30px;
+        width: 200px;
+    }
+}
+
+.forget-container{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin-left: 30px;
+}
+
+.forget-container span{
+   
+   color: #832019;
+   font-size: 1rem;
+   font-weight: 600;
+}
+
+.box{
+    margin-bottom: 25px;
+    
+}
+@media (max-width: 420px) {
+    
+    .forget-container{
+        display: flex;
+        justify-content: space-between;
+        width: 180px;
+        margin-left: 15px;
+    }
+    .forget-container span{
+   
+        color: #832019;
+        font-size: 0.5rem;
+        font-weight: 600;
+     }
+     .box{
+        margin-bottom: 15px;
+        
+    }
+
+}
+
+
+
+.leave{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+}
+.leave .set{
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.leave .set div{
+    position: absolute;
+    display: block;
+}
+
+.leave .set div:nth-child(1){
+    left: 20%;
+    animation: animate 20s linear infinite;
+}
+
+.leave .set div:nth-child(2){
+    left: 50%;
+    animation: animate 14s linear infinite;
+}
+
+.leave .set div:nth-child(3){
+    left: 80%;
+    animation: animate 12s linear infinite;
+}
+.leave .set div:nth-child(4){
+    left: 5%;
+    animation: animate 20s linear infinite;
+}
+.leave .set div:nth-child(5){
+    left: 15%;
+    animation: animate 10s linear infinite;
+}
+.leave .set div:nth-child(6){
+    left: 65%;
+    animation: animate 15s linear infinite;
+}
+.leave .set div:nth-child(7){
+    left: 25%;
+    animation: animate 18s linear infinite;
+}
+.leave .set div:nth-child(8){
+    left: 94%;
+    animation: animate 20s linear infinite;
+}
+@media (max-width: 420px){
+    .leave{
+        z-index: 0.5;
+    }
+}
+
+@keyframes animate{
+
+    0%{
+        opacity: 0;
+        top: -10%;
+        transform: translateX(20px) rotate(0deg);
+    }
+    10%{
+        opacity: 1;
+    }
+    20%{
+        transform: translateX(-20px) rotate(45deg); 
+    }
+    40%{
+        transform: translateX(20px) rotate(90deg);
+    }
+    60%{
+        transform: translateX(-20px) rotate(180deg);
+    }
+    80%{
+        transform: translateX(20px) rotate(45deg);
+    }
+    100%{
+        top: 110%;
+        transform: translateX(20px) rotate(225deg);
+    }
+}
